@@ -111,8 +111,63 @@
   }
   .intro strong { color: var(--ink); font-weight: 700; }
 
+  .ebook-card {
+    margin-top: 28px;
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    padding: 22px 24px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--blue);
+    color: #00131f;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .ebook-card h2 {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--blue);
+  }
+  .ebook-card p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.55;
+  }
+  .ebook-list {
+    margin-top: 16px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ebook-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: .9rem;
+    color: var(--ink);
+  }
+  .ebook-list li::before {
+    content: "—";
+    color: var(--blue);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
   .cta {
-    margin-top: 32px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -172,8 +227,22 @@
     <p class="intro">
       Sou dev, trabalho de casa e mostro a <strong>vida real do home office</strong>, com humor,
       entre café, reunião e produtividade duvidosa. Também crio produtos digitais com IA e compartilho
-      o que realmente ajuda a render mais sem perder a cabeça. Comece pelo guia gratuito abaixo.
+      o que realmente ajuda a render mais sem perder a cabeça.
     </p>
+
+    <div class="ebook-card">
+      <span class="badge">Grátis · E-book novo</span>
+      <h2>Modo Foco.</h2>
+      <p>
+        O guia prático pra organizar sua rotina, proteger seu foco e render mais
+        trabalhando de casa — sem virar refém da tela.
+      </p>
+      <ul class="ebook-list">
+        <li>8 rituais simples de aplicar amanhã</li>
+        <li>Leitura de 20 minutos</li>
+        <li>100% gratuito</li>
+      </ul>
+    </div>
 
     <a class="cta" href="https://drive.google.com/file/d/1NNxcqO4CDvXlabJMavTCCw0MTsJxzcLw/view" rel="noopener">
       Baixar o guia Modo Foco
