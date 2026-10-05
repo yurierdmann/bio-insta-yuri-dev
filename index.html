@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yuri | A vida real por trás do home office</title>
+<meta name="description" content="Guia grátis Modo Foco: como trabalhar de casa sem perder tempo (nem a cabeça).">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Yuri | A vida real por trás do home office">
+<meta property="og:description" content="Guia grátis Modo Foco: como trabalhar de casa sem perder tempo (nem a cabeça).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oyuridev.com">
+<meta property="og:image" content="https://oyuridev.com/foto.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --ink: #ffffff;
+    --muted: #b9bcc0;
+    --blue: #38B6FF;
+    --blue-deep: #2A8ED4;
+    --graphite: #393536;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { height: 100%; }
+  body {
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: calc(env(safe-area-inset-top, 0px) + 40px) 24px calc(env(safe-area-inset-bottom, 0px) + 32px);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Feixe de luz diagonal azul, assinatura da identidade */
+  body::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    width: 340px;
+    height: 780px;
+    background: linear-gradient(180deg, rgba(56,182,255,.38), rgba(56,182,255,0) 75%);
+    filter: blur(56px);
+    transform: translateX(-10%) rotate(24deg);
+    pointer-events: none;
+  }
+
+  main {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100svh - 72px);
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    padding: 4px;
+    background: conic-gradient(from 210deg, var(--blue), var(--blue-deep) 40%, var(--graphite) 70%, var(--blue));
+    box-shadow: 0 0 48px rgba(56,182,255,.35);
+    margin-bottom: 22px;
+  }
+  .avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--graphite);
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--bg);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .avatar .fallback { font-size: 44px; font-weight: 800; color: var(--blue); }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .handle {
+    margin-top: 6px;
+    font-size: .95rem;
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .handle:hover { text-decoration: underline; }
+
+  .intro {
+    margin-top: 22px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 36ch;
+  }
+  .intro strong { color: var(--ink); font-weight: 700; }
+
+  .cta {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 18px 24px;
+    border-radius: 16px;
+    background: var(--blue);
+    color: #00131f;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    box-shadow: 0 10px 34px rgba(56,182,255,.35);
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .cta small {
+    font-size: .85rem;
+    font-weight: 500;
+    opacity: .8;
+    letter-spacing: 0;
+  }
+  .cta:hover { background: #5cc4ff; transform: translateY(-2px); box-shadow: 0 14px 40px rgba(56,182,255,.45); }
+  .cta:active { transform: translateY(0); }
+  .cta:focus-visible, .handle:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: .8rem;
+    color: #6f7378;
+  }
+
+  @media (min-width: 640px) {
+    .avatar { width: 168px; height: 168px; }
+    h1 { font-size: 2rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cta { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="avatar">
+      <div class="avatar-inner">
+        <img src="foto.jpg" alt="Foto do Yuri" width="168" height="168"
+             onerror="this.remove(); this.parentNode.insertAdjacentHTML('beforeend','<span class=&quot;fallback&quot;>Y</span>');">
+      </div>
+    </div>
+
+    <h1>Yuri</h1>
+    <a class="handle" href="https://instagram.com/oyuridev" rel="noopener">@oyuridev</a>
+
+    <p class="intro">
+      Sou dev, trabalho de casa e mostro a <strong>vida real do home office</strong>, com humor,
+      entre café, reunião e produtividade duvidosa. Também crio produtos digitais com IA e compartilho
+      o que realmente ajuda a render mais sem perder a cabeça. Comece pelo guia gratuito abaixo.
+    </p>
+
+    <!-- TROQUE o href abaixo pelo link do seu e-book / funil de captura -->
+    <a class="cta" href="https://SEU-LINK-DO-EBOOK-AQUI" rel="noopener">
+      Baixar o guia Modo Foco
+      <small>100% gratuito</small>
+    </a>
+
+    <footer>oyuridev.com</footer>
+  </main>
+</body>
+</html>
